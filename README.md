@@ -1,2 +1,3 @@
 # javascript
-JS journey
+
+Dumping grounds for my javascript stuff
