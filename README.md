@@ -1,0 +1,2 @@
+# javascript
+JS journey
