@@ -21,7 +21,7 @@ class Bag {
     return this;
   }
   /**
-   * Removes and item from the Bag
+   * Removes an item from the Bag
    * @param {Any} item
    * @returns {Bag} Returns a reference to this Bag instance
    */
