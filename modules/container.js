@@ -11,7 +11,7 @@ class ContainerABC {
   constructor() {
     if (new.target === ContainerABC) {
       throw new TypeError(
-        "Cannot instantiate abstract base class ContainerABC directly"
+        "Cannot instantiate abstract base class ContainerABC directly",
       );
     }
   }

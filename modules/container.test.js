@@ -12,7 +12,7 @@ describe("Test ContainerABC", () => {
       {
         name: "TypeError",
         message: "Cannot instantiate abstract base class ContainerABC directly",
-      }
+      },
     );
   });
 });

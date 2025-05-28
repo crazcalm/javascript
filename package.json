@@ -1,11 +1,16 @@
 {
-    "type": "module",
-    "scripts": {
-        "test": "node --test",
-        "serve": "npx serve .",
-        "docs": "node ./node_modules/jsdoc/jsdoc.js -r -c ./conf.json -d docs"
-    },
-    "devDependencies": {
-        "jsdoc": "^4.0.4"
-    }
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "serve": "npx serve .",
+    "docs": "node ./node_modules/jsdoc/jsdoc.js -r -c ./conf.json -d docs",
+    "format": "node ./node_modules/prettier/bin/prettier.cjs --write ",
+    "check-format": "node ./node_modules/prettier/bin/prettier.cjs --check .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "jsdoc": "^4.0.4",
+    "prettier": "3.5.3"
+  }
 }

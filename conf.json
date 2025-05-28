@@ -1,6 +1,6 @@
 {
-    "source": {
-        "include": ["./modules", "./UI"],
-        "exclude": ["./node_modules"]
-    }
+  "source": {
+    "include": ["./modules", "./UI"],
+    "exclude": ["./node_modules", "./docs"]
+  }
 }

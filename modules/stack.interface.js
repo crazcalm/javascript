@@ -12,7 +12,7 @@ class StackABC {
   constructor() {
     if (new.target === StackABC) {
       throw new TypeError(
-        "Cannot instantiate abstract base class StackABC directly"
+        "Cannot instantiate abstract base class StackABC directly",
       );
     }
   }
