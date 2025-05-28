@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: container.js</title>
+    <title>JSDoc: Source: stack.interface.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: container.js</h1>
+    <h1 class="page-title">Source: stack.interface.js</h1>
 
     
 
@@ -27,80 +27,65 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Interface for a Container class
+ * Interface for a Stack class
  * @interface
  */
-class ContainerABC {
+class StackABC {
   /**
    * @namespace
    * @property {number} length  - positive integer (inlcuding 0)
    */
   length = 0;
+
   constructor() {
-    if (new.target === ContainerABC) {
+    if (new.target === StackABC) {
       throw new TypeError(
-        "Cannot instantiate abstract base class ContainerABC directly"
+        "Cannot instantiate abstract base class StackABC directly"
       );
     }
   }
   /**
-   * Add method allows you to add an item to the container
+   * isEmpty method checks to see if the Stack is empty.
    * @method
-   * @param {Any} item
-   * @returns {None}
-   */
-  add(item) {
-    throw new Error("Not implemented");
-  }
-  /**
-   * Get method allows you to get an item from the container by index.
-   * @method
-   * @param {number} index index of item in container
-   * @returns {Any} returns the item at that index
-   */
-  get(index) {
-    throw new Error("not implemented");
-  }
-  /**
-   * Remove methed allows you to remove an item from the container via its index.
-   * If not index was passed, then we remove the last item in the container. If an
-   * item was successfully removed, return that item. If the removal was unsuccessful,
-   * return undefined.
-   * @method
-   * @param {Any | None} item
-   * @returns {Any | undefined} if successful, returns the removed item
-   */
-  remove(index) {
-    throw new Error("Not implemented");
-  }
-  /**
-   * Contains method checks to see if the item passed in is within the container.
-   * If found, return the index of the item.
-   * @method
-   * @param {Any} item
-   * @returns {number} Returns index of item in the container, -1 otherwise.
-   */
-  contains(item) {
-    throw new Error("Not implemented");
-  }
-  /**
-   * Clear method removed all items from the container.
-   * @method
-   */
-  clear() {
-    throw new Error("Not implemented");
-  }
-  /**
-   * isEmpty method returns true if the container is empty and false otherwise.
-   * @method
-   * @returns {boolean} True, if empty. False otherwise
+   * @returns {boolean} true, if empty. False otherwise
    */
   isEmpty() {
-    return this.length === 0;
+    throw new Error("Not implemented");
+  }
+  /**
+   * peek method allows you to take look at the last item pushed to the stack
+   * @method
+   * @returns {Any} item at top of the stack
+   */
+  peek() {
+    throw new Error("Not implemented");
+  }
+  /**
+   * pop method removed the last item pushed into the stack.
+   * @method
+   * @returns {Any} Item gets removed from the top of the stack
+   */
+  pop() {
+    throw new Error("Not implemented");
+  }
+  /**
+   * push method adds a new item to the stack
+   * @method
+   * @param {Any} item
+   */
+  push(item) {
+    throw new Error("Not implemented");
+  }
+
+  /**
+   * toString method returns a string representaton of the items in the stack
+   * @method
+   * @returns {String} string representation of the items in the stack
+   */
+  toString() {
+    throw new Error("Not implemented");
   }
 }
-
-export { ContainerABC };
 </code></pre>
         </article>
     </section>

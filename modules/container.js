@@ -1,5 +1,5 @@
 /**
- * Interface for a container class
+ * Interface for a Container class
  * @interface
  */
 class ContainerABC {
