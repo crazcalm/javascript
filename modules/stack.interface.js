@@ -8,7 +8,6 @@ class StackABC {
    * @property {number} length  - positive integer (inlcuding 0)
    */
   length = 0;
-
   constructor() {
     if (new.target === StackABC) {
       throw new TypeError(
@@ -48,7 +47,6 @@ class StackABC {
   push(item) {
     throw new Error("Not implemented");
   }
-
   /**
    * toString method returns a string representaton of the items in the stack
    * @method
@@ -58,3 +56,5 @@ class StackABC {
     throw new Error("Not implemented");
   }
 }
+
+export { StackABC };

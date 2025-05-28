@@ -35,7 +35,6 @@ describe("Test Stack Class", () => {
       assert.strictEqual(data.length, stack.length);
     }
   });
-
   test("Test ToString metod", () => {
     const expected_string = "1,2,3,4";
 
