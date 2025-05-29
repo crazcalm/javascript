@@ -4,7 +4,6 @@
  */
 class StackABC {
   /**
-   * @namespace
    * @property {number} length  - positive integer (inlcuding 0)
    */
   length = 0;

@@ -1,6 +1,11 @@
 import { StackABC } from "./stack.interface.js";
 import { Container } from "./container.array.js";
 
+/**
+ * Stack -- Implementation of the StackABC using a Container
+ *@class
+ *@extends StackABC
+ */
 class Stack {
   constructor() {
     this.container = new Container();

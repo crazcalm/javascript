@@ -10,6 +10,15 @@ class Container extends ContainerABC {
     super();
     this.array = new Array();
   }
+  /**
+   * Generator used for the for/of loop
+   * @yields {Any} The next item in the list from left to right
+   */
+  *[Symbol.iterator]() {
+    for (let data of this.array) {
+      yield data;
+    }
+  }
 
   add(item) {
     this.array.push(item);

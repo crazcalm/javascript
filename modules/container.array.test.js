@@ -84,4 +84,19 @@ describe("Test ContainerABC", () => {
 
     assert.strictEqual(expected_string, container.toString());
   });
+
+  test("Test for/of loop", () => {
+    let data = [1, 2, 3];
+    let container = new Container();
+    for (let item of data) {
+      container.add(item);
+    }
+
+    let result = [];
+    for (let my_data of container) {
+      result.push(my_data);
+    }
+
+    assert.deepStrictEqual(data, result);
+  });
 });
