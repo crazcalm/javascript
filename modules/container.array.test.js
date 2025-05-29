@@ -73,4 +73,15 @@ describe("Test ContainerABC", () => {
     assert.strictEqual(container.remove(0), 1);
     assert.strictEqual(container.length, 2);
   });
+  test("Test ToString metod", () => {
+    const expected_string = "1,2,3,4";
+
+    let container = new Container();
+    let data = [1, 2, 3, 4];
+    data.forEach((item) => {
+      container.add(item);
+    });
+
+    assert.strictEqual(expected_string, container.toString());
+  });
 });

@@ -47,6 +47,9 @@ class Container extends ContainerABC {
     }
     return result;
   }
+  toString() {
+    return this.array.toString();
+  }
 }
 
 export { Container };

@@ -70,6 +70,14 @@ class ContainerABC {
   isEmpty() {
     return this.length === 0;
   }
+  /**
+   * toString method returns a string representaton of the items in the stack
+   * @method
+   * @returns {String} string representation of the items in the stack
+   */
+  toString() {
+    throw new Error("Not implemented");
+  }
 }
 
 export { ContainerABC };
