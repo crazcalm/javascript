@@ -67,24 +67,26 @@ class DoublyLinkedList {
     }
     return null;
   }
-
-  printForward() {
+  *[Symbol.iterator]() {
     let current = this.head.next;
-    const result = [];
     while (current !== this.tail) {
-      result.push(current.value);
+      yield current.value;
       current = current.next;
     }
-    console.log(result.join(","));
   }
-  printBackward() {
+
+  *reverseIterator() {
     let current = this.tail.prev;
-    const result = [];
     while (current !== this.head) {
-      result.push(current.value);
+      yield current.value;
       current = current.prev;
     }
-    console.log(result.join(","));
+  }
+  printForward() {
+    console.log([...this].join(","));
+  }
+  printBackward() {
+    console.log([...this.reverseIterator()].join(","));
   }
 }
 
