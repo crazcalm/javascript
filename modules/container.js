@@ -6,7 +6,6 @@ class ContainerABC {
   /**
    * @property {number} length  - positive integer (inlcuding 0)
    */
-  length = 0;
   constructor() {
     if (new.target === ContainerABC) {
       throw new TypeError(

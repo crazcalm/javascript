@@ -6,6 +6,7 @@ import { ContainerABC } from "./container.js";
  * @extends ContainerABC
  */
 class Container extends ContainerABC {
+  length = 0;
   constructor() {
     super();
     this.array = new Array();

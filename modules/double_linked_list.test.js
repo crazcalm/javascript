@@ -14,7 +14,7 @@ describe("Tests for DoublyLinkedList", () => {
     assert.strictEqual(list.isEmpty(), false);
   });
 
-  test("Test append method", () => {
+  test("Test append method and forward iterator", () => {
     const data = [1, 2, 3, 4, 5];
     const list = new DoublyLinkedList();
 
@@ -26,7 +26,7 @@ describe("Tests for DoublyLinkedList", () => {
     assert.strictEqual(data.length, list.length);
   });
 
-  test("Test prepend method", () => {
+  test("Test prepend method and reverseIterator", () => {
     const data = [1, 2, 3, 4, 5];
     const list = new DoublyLinkedList();
 
@@ -36,5 +36,17 @@ describe("Tests for DoublyLinkedList", () => {
 
     assert.deepStrictEqual(data, [...list.reverseIterator()]);
     assert.strictEqual(data.length, list.length);
+  });
+
+  test("Test find and remove methods", () => {
+    const list = new DoublyLinkedList();
+    list.append("a");
+    list.append("b");
+    list.append("c");
+
+    let node = list.find("b");
+    list.remove(node);
+
+    assert.deepStrictEqual([...list], ["a", "c"]);
   });
 });
