@@ -1,7 +1,7 @@
 import { describe, test } from "node:test";
 import assert from "node:assert";
 
-import { ContainerArrayStack as Stack } from "./stack.container.array.js";
+import { ContainerLinkedListStack as Stack } from "./stack.container.linkedlist.js";
 
 describe("Test Stack Class", () => {
   test("Test Empty method", () => {

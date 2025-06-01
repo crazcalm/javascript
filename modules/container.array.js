@@ -5,7 +5,7 @@ import { ContainerABC } from "./container.js";
  * @class
  * @extends ContainerABC
  */
-class Container extends ContainerABC {
+class ArrayContainer extends ContainerABC {
   length = 0;
   constructor() {
     super();
@@ -62,4 +62,4 @@ class Container extends ContainerABC {
   }
 }
 
-export { Container };
+export { ArrayContainer };

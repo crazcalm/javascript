@@ -6,7 +6,7 @@ import { DoublyLinkedList } from "./double_linked_list.js";
  * @class
  * @extends ContainerABC
  */
-class Container extends ContainerABC {
+class LinkedListContainer extends ContainerABC {
   constructor() {
     super();
     this.list = new DoublyLinkedList();
@@ -82,4 +82,4 @@ class Container extends ContainerABC {
   }
 }
 
-export { Container };
+export { LinkedListContainer };

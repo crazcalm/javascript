@@ -1,7 +1,7 @@
 import { describe, test } from "node:test";
 import assert from "node:assert";
 
-import { Container } from "./container.linkedlist.js";
+import { LinkedListContainer as Container } from "./container.linkedlist.js";
 
 describe("Test ContainerABC", () => {
   test("Test add method", () => {

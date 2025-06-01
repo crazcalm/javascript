@@ -1,12 +1,12 @@
 import { StackABC } from "./stack.interface.js";
-import { Container } from "./container.linkedlist.js";
+import { LinkedListContainer as Container } from "./container.linkedlist.js";
 
 /**
  * Stack -- Implementation of the StackABC using a Container
  *@class
  *@extends StackABC
  */
-class Stack {
+class ContainerLinkedListStack {
   constructor() {
     this.container = new Container();
   }
@@ -41,4 +41,4 @@ class Stack {
   }
 }
 
-export { Stack };
+export { ContainerLinkedListStack };

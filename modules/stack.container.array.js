@@ -1,12 +1,12 @@
 import { StackABC } from "./stack.interface.js";
-import { Container } from "./container.array.js";
+import { ArrayContainer as Container } from "./container.array.js";
 
 /**
  * Stack -- Implementation of the StackABC using a Container
  *@class
  *@extends StackABC
  */
-class Stack {
+class ContainerArrayStack {
   constructor() {
     this.container = new Container();
   }
@@ -41,4 +41,4 @@ class Stack {
   }
 }
 
-export { Stack };
+export { ContainerArrayStack };

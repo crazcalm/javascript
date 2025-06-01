@@ -1,7 +1,7 @@
 import { describe, test } from "node:test";
 import assert from "node:assert";
 
-import { Container } from "./container.array.js";
+import { ArrayContainer as Container } from "./container.array.js";
 
 describe("Test ContainerABC", () => {
   test("Test add method", () => {
