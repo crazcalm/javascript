@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: container.array.js</title>
+    <title>JSDoc: Source: queue.interface.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: container.array.js</h1>
+    <h1 class="page-title">Source: queue.interface.js</h1>
 
     
 
@@ -26,71 +26,66 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { ContainerABC } from "./container.js";
-
-/**
- * Container -- Implementation of ContainerABC using an array.
- * @class
- * @extends ContainerABC
+            <pre class="prettyprint source linenums"><code>/**
+ * Interface for a Queue class
  */
-class ArrayContainer extends ContainerABC {
-  length = 0;
+class QueueABC {
   constructor() {
-    super();
-    this.array = new Array();
+    if (new.target === QueueABC) {
+      throw new TypeError(
+        "Cannot instantiate abstract base class QueueABC directly",
+      );
+    }
   }
   /**
-   * Generator used for the for/of loop
-   * @yields {Any} The next item in the list from left to right
+   * @property {number} length -- positive integer (including 0)
    */
-  *[Symbol.iterator]() {
-    for (let data of this.array) {
-      yield data;
-    }
+  get length() {
+    throw new Error("Not implemented");
   }
-
-  add(item) {
-    this.array.push(item);
-    this.length++;
+  /**
+   * enqueue method adds an item to the back of the queue
+   * @method
+   * @param {Any} item
+   */
+  enqueue(item) {
+    throw new Error("Not implemented");
   }
-
-  clear() {
-    this.array = new Array();
-    this.length = 0;
+  /**
+   * dequeue method remove and item from the front of the queue
+   * @method
+   * @returns {Any} item
+   */
+  dequeue() {
+    throw new Error("Not implemented");
   }
-
-  get(index) {
-    let result = undefined;
-    if (index >= 0 &amp;&amp; index &lt; this.length) {
-      result = this.array[index];
-    }
-    return result;
+  /**
+   * peek method returns the item at the front of the queue without removing it
+   * @method
+   * @returns {Any} item
+   */
+  peek() {
+    throw new Error("Not implemented");
   }
-
-  contains(item) {
-    return this.array.indexOf(item);
+  /**
+   * isEmpty method checks to see if the queue is empty
+   * @method
+   * returns {boolean} true, if empty. False otherwise
+   */
+  isEmpty() {
+    throw new Error("Not implemented");
   }
-
-  remove(index) {
-    let result = undefined;
-    if (this.isEmpty() === false) {
-      if (index === undefined) {
-        result = this.array.pop();
-        this.length--;
-      } else if (index >= 0 &amp;&amp; index &lt;= this.length) {
-        result = this.array[index];
-        this.array = this.array.splice(index, 1);
-        this.length--;
-      }
-    }
-    return result;
-  }
+  /**
+   * toString method returns a string representaton of the items in the queue
+   * @method
+   * @returns {String} string representation of the items in the queue
+   */
   toString() {
-    return this.array.toString();
+    throw new Error("Not implemented");
   }
 }
 
-export { ArrayContainer };
+export { QueueABC };
 </code></pre>
         </article>
     </section>
